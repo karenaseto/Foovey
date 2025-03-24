@@ -1,11 +1,7 @@
 :root {
-  font-family: 'Italiana', serif;
-  line-height: 1.5;
-  font-weight: 400;
-
+  font-family: serif;
   color: #111;
   background-color: #e4d5b7;
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;

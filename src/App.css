@@ -1,14 +1,35 @@
-/* Main layout + background */
+@font-face {
+  font-family: 'Sanford';
+  src: url('./assets/fonts/Sanford.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 html, body {
   background-color: #e4d5b7;
   color: #111;
-  font-family: 'Italiana', serif;
+  font-family: 'Sanford', serif;
 }
 
-/* Ensure app fills screen */
 #root {
   height: 100%;
   width: 100%;
+}
+
+.page-wrapper {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.foovey-brand {
+  position: absolute;
+  top: 20px;
+  left: 30px;
+  font-size: 1.8rem;
+  font-weight: bold;
+  font-family: 'Sanford', serif;
+  color: #111;
 }
 
 .app.new-layout {
@@ -29,7 +50,6 @@ html, body {
   margin-bottom: 2rem;
 }
 
-/* Search section */
 .search-container {
   display: flex;
   flex-direction: column;
@@ -55,6 +75,7 @@ html, body {
   border: 1px solid #444;
   background-color: #fff;
   color: #111;
+  font-family: serif;
 }
 
 .dropdown {
@@ -69,6 +90,7 @@ html, body {
   overflow-y: auto;
   z-index: 10;
   color: #111;
+  font-family: serif;
 }
 
 .dropdown li {
@@ -92,7 +114,6 @@ html, body {
   color: #444;
 }
 
-/* Responsive tweaks for mobile */
 @media (max-width: 600px) {
   .headline {
     font-size: 2.2rem;

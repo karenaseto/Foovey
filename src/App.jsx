@@ -47,41 +47,45 @@ function App() {
   );
 
   return (
-    <div className="app new-layout">
-      <h1 className="headline">Let's go get {meal}, {name}!</h1>
+    <div className="page-wrapper">
+      <div className="foovey-brand">Foovey</div>
 
-      <div className="search-container">
-        <label className="search-label">What are we craving?</label>
-        <div className="dropdown-wrapper">
-          <input
-            type="text"
-            placeholder="Type or select cuisine..."
-            value={search}
-            onFocus={() => setShowDropdown(true)}
-            onBlur={() => setTimeout(() => setShowDropdown(false), 100)} // delay for click
-            onChange={(e) => setSearch(e.target.value)}
-          />
-          {showDropdown && (
-            <ul className="dropdown">
-              {filteredOptions.length > 0 ? (
-                filteredOptions.map((option, index) => (
-                  <li
-                    key={index}
-                    onClick={() => {
-                      setSearch(option);
-                      setShowDropdown(false);
-                    }}
-                  >
-                    {option}
-                  </li>
-                ))
-              ) : (
-                <li className="no-match">Cuisine not found</li>
-              )}
-            </ul>
-          )}
+      <div className="app new-layout">
+        <h1 className="headline">Let's go get {meal}, {name}!</h1>
+
+        <div className="search-container">
+          <label className="search-label">What are we craving?</label>
+          <div className="dropdown-wrapper">
+            <input
+              type="text"
+              placeholder="Type or select cuisine..."
+              value={search}
+              onFocus={() => setShowDropdown(true)}
+              onBlur={() => setTimeout(() => setShowDropdown(false), 100)}
+              onChange={(e) => setSearch(e.target.value)}
+            />
+            {showDropdown && (
+              <ul className="dropdown">
+                {filteredOptions.length > 0 ? (
+                  filteredOptions.map((option, index) => (
+                    <li
+                      key={index}
+                      onClick={() => {
+                        setSearch(option);
+                        setShowDropdown(false);
+                      }}
+                    >
+                      {option}
+                    </li>
+                  ))
+                ) : (
+                  <li className="no-match">Cuisine not found</li>
+                )}
+              </ul>
+            )}
+          </div>
+          <span className="location">{location}</span>
         </div>
-        <span className="location">{location}</span>
       </div>
     </div>
   );

@@ -1,0 +1,108 @@
+/* Main layout + background */
+html, body {
+  background-color: #e4d5b7;
+  color: #111;
+  font-family: 'Italiana', serif;
+}
+
+/* Ensure app fills screen */
+#root {
+  height: 100%;
+  width: 100%;
+}
+
+.app.new-layout {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.headline {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+/* Search section */
+.search-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.search-label {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.dropdown-wrapper {
+  position: relative;
+  width: 250px;
+}
+
+.dropdown-wrapper input {
+  padding: 0.7rem 1rem;
+  font-size: 1rem;
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid #444;
+  background-color: #fff;
+  color: #111;
+}
+
+.dropdown {
+  position: absolute;
+  top: 105%;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  max-height: 200px;
+  overflow-y: auto;
+  z-index: 10;
+  color: #111;
+}
+
+.dropdown li {
+  padding: 0.6rem 1rem;
+  cursor: pointer;
+  text-align: left;
+}
+
+.dropdown li:hover {
+  background-color: #f0f0f0;
+}
+
+.no-match {
+  padding: 0.6rem 1rem;
+  color: #777;
+  font-style: italic;
+}
+
+.location {
+  font-size: 1rem;
+  color: #444;
+}
+
+/* Responsive tweaks for mobile */
+@media (max-width: 600px) {
+  .headline {
+    font-size: 2.2rem;
+  }
+
+  .dropdown-wrapper {
+    width: 200px;
+  }
+
+  .search-label {
+    font-size: 1rem;
+  }
+}

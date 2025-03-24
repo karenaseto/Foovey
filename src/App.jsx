@@ -28,6 +28,7 @@ const cuisineOptions = [
   "Argentine",
   "Fast food",
   "American",
+  "Desserts",
 ];
 
 function App() {

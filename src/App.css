@@ -1,3 +1,4 @@
+/* Base styles */
 @font-face {
   font-family: 'Sanford';
   src: url('./assets/fonts/Sanford.ttf') format('truetype');
@@ -9,6 +10,8 @@ html, body {
   background-color: #d8c8b4;
   color: #111;
   font-family: 'Sanford', serif;
+  margin: 0;
+  padding: 0;
 }
 
 #root {
@@ -131,4 +134,11 @@ html, body {
   .search-label {
     font-size: 1rem;
   }
+}
+
+/* Masonry layout with masonry-layout.js */
+.results-page {
+  background-color: #e4d5b7;
+  padding: 2rem;
+  min-height: 100vh;
 }
